@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.PerformanceRunDetailViewActivity">
+
+    <EditText
+        android:id="@+id/debugInfo"
+        android:layout_width="match_parent"
+        android:layout_height="89dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="5dp"
+        android:clickable="false"
+        android:inputType="text"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.8"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.018" />
+
+    <com.jjoe64.graphview.GraphView
+        android:id="@+id/graph"
+        android:layout_width="586dp"
+        android:layout_height="387dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/debugInfo"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <Button
+        android:id="@+id/DeleteButton"
+        android:layout_width="120dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="13dp"
+        android:onClick="onDeleteClick"
+        android:text="@string/delete"
+        app:layout_constraintBottom_toTopOf="@+id/graph"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.98"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <Button
+        android:id="@+id/redoButton"
+        android:layout_width="120dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="13dp"
+        android:text="@string/redo"
+        android:onClick="onRedoClick"
+        app:layout_constraintBottom_toTopOf="@+id/graph"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.023"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+
+    <TextView
+        android:id="@+id/audio_base_bpm_text"
+        android:layout_width="239dp"
+        android:layout_height="44dp"
+        android:ems="10"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.955"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/debugInfo"
+        app:layout_constraintVertical_bias="0.048" />
+
+    <TextView
+        android:id="@+id/audioTextField"
+        android:layout_width="145dp"
+        android:layout_height="45dp"
+        android:layout_marginLeft="10dp"
+        android:ems="10"
+        android:text="@string/baseBpm"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/audio_base_bpm_text"
+        app:layout_constraintHorizontal_bias="0.651"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/debugInfo"
+        app:layout_constraintVertical_bias="0.047" />
+
+    <TextView
+        android:id="@+id/audio_path"
+        android:layout_width="239dp"
+        android:layout_height="44dp"
+        android:ems="10"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.955"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/debugInfo"
+        app:layout_constraintVertical_bias="0.11" />
+
+    <TextView
+        android:id="@+id/audioPathTitle"
+        android:layout_width="145dp"
+        android:layout_height="45dp"
+        android:layout_marginLeft="10dp"
+        android:ems="10"
+        android:text="@string/file"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/audio_base_bpm_text"
+        app:layout_constraintHorizontal_bias="0.651"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/debugInfo"
+        app:layout_constraintVertical_bias="0.109" />
+
+    <TextView
+        android:id="@+id/dateField"
+        android:layout_width="239dp"
+        android:layout_height="44dp"
+        android:ems="10"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.955"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/debugInfo"
+        app:layout_constraintVertical_bias="0.174" />
+
+    <TextView
+        android:id="@+id/dateTitle"
+        android:layout_width="145dp"
+        android:layout_height="45dp"
+        android:layout_marginLeft="10dp"
+        android:ems="10"
+        android:text="@string/date"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/audio_base_bpm_text"
+        app:layout_constraintHorizontal_bias="0.651"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/debugInfo"
+        app:layout_constraintVertical_bias="0.173" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

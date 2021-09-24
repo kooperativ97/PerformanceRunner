@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">PerformanceRunner</string>
+    <string name="title_activity_overview">Overview</string>
+    <string name="tab_text_1">Tab 1</string>
+    <string name="tab_text_2">Tab 2</string>
+    <string name="startSeekText">Delay</string>
+    <string name="durationSeekText">Duration</string>
+    <string name="ManipulationSeekText">Performance Gain</string>
+    <string name="offsetSeekText">Offset</string>
+    <string name="delete">delete</string>
+    <string name="redo">redo</string>
+    <string name="baseBpm">Base BPM</string>
+    <string name="file">File</string>
+    <string name="date">Date</string>
+    <string name="bpmAudio">Music</string>
+    <string name="BpmRunning">Your Tempo</string>
+    <string name="emptyBPM">- BPM</string>
+    <string name="emptySPM">- SPM</string>
+</resources>
